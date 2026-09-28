@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mariluz Flowers | Floral Arrangements & Party Rentals</title>
+
+    <meta name="description" content="Mariluz Flowers & Party Rentals in Providence, RI. Handcrafted floral arrangements for all occasions, custom decor, party rentals, and local delivery.">
+    <meta name="geo.region" content="US-RI">
+    <meta name="geo.placename" content="Providence">
+    
+    <meta property="og:title" content="Mariluz Flowers & Party Rentals | Providence, RI">
+    <meta property="og:description" content="Floral arrangements for all occasions, custom balloon decor, and party rentals in Providence, RI. Call or order today!">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bloom: {
+                            50: '#fdfbf7',   // Warm Cream background
+                            100: '#f8f2eb',  // Soft linen card bg
+                            200: '#f0e3d5',
+                            500: '#d46a84',  // Deep Rose primary accent
+                            600: '#be536d',
+                            700: '#9e3b52',
+                            sage: '#7a9a85', // Botanical Sage green
+                            sagelight: '#e8f0ec',
+                            bear: '#8c6248', // Soft Teddy Brown
+                            bearlight: '#f5eee9',
+                            gold: '#d4af37'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['Cormorant Garamond', 'serif'],
+                        sans: ['Plus Jakarta Sans', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZJQ5C1P7X4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-ZJQ5C1P7X4');
+    </script>
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="antialiased selection:bg-bloom-500 selection:text-white">
+
+    <header class="fixed top-0 left-0 w-full z-40 transition-all duration-300 glass-header border-b border-bloom-500/10" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex justify-between items-center">
+            
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center gap-2 group">
+                <div class="w-10 h-10 rounded-full bg-bloom-500/10 flex items-center justify-center text-bloom-500 group-hover:bg-bloom-500 group-hover:text-white transition-all duration-300">
+                    <img src="images/favicon.ico" alt="Mariluz Flowers Logo" class="w-6 h-6 object-contain">
+                </div>
+                <div>
+                    <span class="font-serif text-2xl font-bold tracking-tight text-gray-900 block leading-none">Mariluz Flowers</span>
+                    <span class="text-[9px] font-sans text-bloom-sage font-semibold">Luxury Floral design</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-700">
+                <a href="index.html" class="hover:text-bloom-500 transition-colors">Home</a>
+                <a href="flowers.html" class="hover:text-bloom-500 transition-colors">Floral</a>
+                <a href="decorations.html" class="hover:text-bloom-500 transition-colors">Decorations</a>
+                <a href="bundle.html" class="hover:text-bloom-500 transition-colors flex items-center gap-1.5 text-bloom-500 font-semibold">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i> Custom Bundle
+                </a>
+                <a href="occasion.html" class="hover:text-bloom-500 transition-colors">Occasions</a>
+            </nav>
+
+            <!-- Quick Action Icons -->
+
+            <div class="flex items-center gap-4">
+                <div class="relative hidden sm:block">
+                    <input type="text" id="search-input" placeholder="Search roses, bears..." 
+                           class="w-44 focus:w-60 transition-all duration-300 text-xs rounded-full bg-bloom-100/80 border border-bloom-500/20 px-4 py-2 pr-8 focus:outline-none focus:border-bloom-500 text-gray-700">
+                    <i class="fa-solid fa-magnifying-glass absolute right-3 top-2.5 text-xs text-gray-400"></i>
+                </div>
+
+                <button id="cart-btn" class="relative p-2.5 rounded-full bg-bloom-500/10 text-bloom-600 hover:bg-bloom-500 hover:text-white transition-all" aria-label="Open Cart">
+                    <i class="fa-solid fa-basket-shopping text-lg"></i>
+                    <span id="cart-count" class="absolute -top-1 -right-1 w-5 h-5 rounded-full bg-bloom-500 text-white text-[11px] font-bold flex items-center justify-center border-2 border-white">0</span>
+                </button>
+
+                <!-- Mobile menu toggle -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-700 hover:text-bloom-500" aria-label="Toggle Mobile Menu">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden glass-header border-b border-bloom-500/10 px-6 py-4 flex flex-col gap-4 text-sm font-medium">
+            <a href="index.html" class="mobile-link py-2 border-b border-gray-100">Home</a>
+            <a href="flowers.html" class="mobile-link py-2 border-b border-gray-100">Floral Arrangements</a>
+            <a href="decorations.html" class="mobile-link py-2 border-b border-gray-100">Decorations</a>
+            <a href="bundle.html" class="mobile-link py-2 border-b border-gray-100 text-bloom-500 font-semibold"><i class="fa-solid fa-wand-magic-sparkles mr-2"></i>Custom Gift Box Builder</a>
+            <a href="occasion.html" class="mobile-link py-2 border-b border-gray-100">Occasions Guide</a>
+        </div>
+    </header>
+
+    <main class="pt-20">
+        <!-- Flowers Section -->
+        <section id="shop" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-xs font-semibold uppercase tracking-widest text-bloom-sage">Curated Catalog</span>
+                <h2 class="text-3xl sm:text-5xl font-serif font-bold text-gray-900 mt-1">Floral & Gift Collections</h2>
+                <p class="text-gray-500 text-sm mt-3">Select from individual bouquets, luxury plush companions, or pre-crafted gift sets.</p>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="flex justify-center gap-2 sm:gap-4 mb-12 flex-wrap" id="category-filters">
+                <button class="cat-filter active px-6 py-2.5 rounded-full text-xs font-semibold transition-all bg-bloom-500 text-white shadow-md shadow-bloom-500/20" data-category="all">
+                    All Products
+                </button>
+                <button class="cat-filter px-6 py-2.5 rounded-full text-xs font-semibold transition-all bg-white text-gray-600 border border-bloom-200 hover:border-bloom-500" data-category="flowers">
+                    Fresh Flowers
+                </button>
+                <button class="cat-filter px-6 py-2.5 rounded-full text-xs font-semibold transition-all bg-white text-gray-600 border border-bloom-200 hover:border-bloom-500" data-category="bears">
+                    Teddy Bears
+                </button>
+                
+            </div>
+
+            <!-- Product Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8" id="products-grid">
+                <!-- Populated dynamically via JS -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Cart Drawer -->
+    <div id="cart-drawer" class="fixed inset-0 z-50 pointer-events-none transition-opacity duration-300 opacity-0">
+        <!-- Backdrop Overlay -->
+        <!-- <div id="cart-backdrop" class="absolute inset-0 bg-black/50 pointer-events-auto"></div> -->
+
+        <!-- Drawer Content -->
+        <div class="absolute top-0 right-0 h-full w-full max-w-md bg-white shadow-2xl pointer-events-auto flex flex-col transform translate-x-full transition-transform duration-300" id="cart-panel">
+            
+            <!-- Cart Header -->
+            <div class="p-6 border-b border-gray-100 flex justify-between items-center bg-bloom-50">
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-basket-shopping text-bloom-500"></i>
+                    <h3 class="font-serif text-2xl font-bold text-gray-900">Your Gift Cart</h3>
+                </div>
+                <button id="close-cart-btn" class="p-2 text-gray-400 hover:text-gray-700" aria-label="Close Cart">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+
+            <!-- Free Shipping Progress -->
+            <div class="p-4 bg-bloom-100/50 border-b border-gray-100 text-xs">
+                <div class="w-full h-2 bg-gray-200 rounded-full overflow-hidden">
+                    <div id="shipping-bar" class="h-full bg-bloom-500 transition-all duration-500" style="width: 30%"></div>
+                </div>
+            </div>
+
+            <!-- Cart Items List -->
+            <div class="flex-1 overflow-y-auto p-6 space-y-4" id="cart-items-container">
+                <!-- Dynamically populated -->
+            </div>
+
+            <!-- Cart Footer -->
+            <div class="p-6 border-t border-gray-100 bg-bloom-50 space-y-4">
+                <div class="space-y-2 text-sm text-gray-600">
+                    <div class="flex justify-between">
+                        <span>Subtotal</span>
+                        <span class="font-semibold text-gray-900" id="cart-subtotal">$0.00</span>
+                    </div>
+                    <div class="flex justify-between">
+                    </div>
+                    <div class="flex justify-between text-base font-serif font-bold text-gray-900 border-t border-gray-200 pt-2">
+                        <span>Total</span>
+                        <span class="text-bloom-600 text-xl" id="cart-total">$0.00</span>
+                    </div>
+                </div>
+
+                
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Quickview Modal -->
+    <div id="quickview-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 p-4">
+        <div class="bg-white border-white/10 w-full max-w-3xl rounded-3xl overflow-hidden shadow-2xl relative transform scale-95 transition-transform duration-300 max-h-[90vh] flex flex-col md:flex-row" id="quickview-content">
+            <button id="close-quickview" class="absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-white/80 text-gray-700 flex items-center justify-center hover:bg-white shadow" aria-label="Close Quickview">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="w-full md:w-1/2 h-64 md:h-auto relative bg-bloom-100">
+                <img id="modal-img" src="" alt="Product Image" class="w-full h-full object-cover">
+            </div>
+            <div class="w-full md:w-1/2 p-6 md:p-8 overflow-y-auto flex flex-col justify-between space-y-4">
+                <div>
+                    <span id="modal-category" class="text-[10px] font-bold uppercase tracking-wider text-bloom-sage px-2 py-1 rounded bg-bloom-sagelight">Category</span>
+                    <h2 id="modal-title" class="text-2xl sm:text-3xl font-serif font-bold text-gray-900 mt-2">Product Name</h2>
+                    <p id="modal-price" class="text-xl font-serif font-bold text-bloom-600 mt-1">$0.00</p>
+                    <p id="modal-desc" class="text-gray-500 text-sm mt-4 leading-relaxed">Description goes here...</p>
+                    
+                    <!-- Custom Greeting Note Input -->
+                    <div class="mt-4 pt-4 border-t border-gray-100">
+                        <label for="modal-note" class="block text-xs font-semibold text-gray-700 mb-1">Add Free Greeting Card Message:</label>
+                        <textarea id="modal-note" rows="2" placeholder="e.g. Happy Anniversary my love!" class="w-full border border-gray-200 rounded-xl p-2.5 text-xs focus:outline-none focus:border-bloom-500"></textarea>
+                    </div>
+                </div>
+
+                <button id="modal-add-btn" class="w-full py-3.5 rounded-xl bg-bloom-500 text-white font-medium hover:bg-bloom-600 transition-colors shadow-md flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-basket-shopping"></i> Add to Cart
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-10 pb-12 border-b border-gray-800">
+            <div class="space-y-4">
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 rounded-full bg-bloom-500 flex items-center justify-center text-white text-sm">
+                        <img src="images/favicon.ico" alt="mariluz flowers logo">
+                    </div>
+                    <span class="font-serif text-xl font-bold tracking-tight">Mariluz Flowers</span>
+                </div>
+                <p class="text-gray-400 text-xs leading-relaxed max-w-sm">Providence's boutique floral design studio, custom party decorator, and gift shop since 2008.</p>
+            </div>
+
+           <div>
+                <h4 class="font-serif text-lg font-bold mb-4 text-bloom-200">Contact & Locations</h4>
+                <ul class="space-y-3 text-xs text-gray-400">
+                    <li>
+                        <a target="_blank" aria-label="50 Olneyville Square location" href="https://www.google.com/maps/place/Mariluz+Flower+and+Party/@41.816972,-71.443046,190m/data=!3m1!1e3!4m6!3m5!1s0x89e44590689c7245:0x16b77cd7745c9103!8m2!3d41.816972!4d-71.443046!16s%2Fg%2F1tm8f_jg?entry=ttu&g_ep=EgoyMDI2MDkyMy4wIKXMDSoASAFQAw%3D%3D" class="hover:text-white transition-colors flex items-center gap-2">
+                            <i class="fa-solid fa-location-dot text-bloom-500"></i> 50 Olneyville Square, Providence, RI 02909
+                        </a>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <i class="fa-solid fa-phone text-bloom-500"></i> (401) 490-0987
+                    </li>
+                    <li>                                                            
+                        <a target="_blank" aria-label="148 Webster Avenue location" href="https://www.google.com/maps/place/Mariluz+flowers+and+party+store/@41.8116459,-71.4498036,190m/data=!3m1!1e3!4m6!3m5!1s0x89e445d3ef99d48b:0xcc266418ea446025!8m2!3d41.8116891!4d-71.4496398!16s%2Fg%2F11ngtk45c9?entry=ttu&g_ep=EgoyMDI2MDkyMy4wIKXMDSoASAFQAw%3D%3D" class="hover:text-white transition-colors flex items-center gap-2">
+                            <i class="fa-solid fa-location-dot text-bloom-500"></i> 148 Webster Avenue, Providence, RI 02909
+                        </a>
+                    </li>
+                    <li class="flex items-center gap-2">
+                        <i class="fa-solid fa-phone text-bloom-500"></i> (401) 865-6177
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 flex flex-col sm:flex-row justify-between items-center text-xs text-gray-500 gap-4">
+            <p>&copy; 2026 Mariluz Flowers Inc. All rights reserved.</p>
+            <div class="flex gap-4">
+                <a target="_blank" aria-label="Instagram" href="https://www.instagram.com/flowers_2024.1/" class="hover:text-gray-300 transition-colors"><i class="fa-brands fa-instagram text-base"></i></a>
+                <a target="_blank" aria-label="Facebook" href="https://www.facebook.com/people/Mariluz-Flowers-and-Party-Store/100068434938916/#" class="hover:text-gray-300 transition-colors"><i class="fa-brands fa-facebook text-base"></i></a> 
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
