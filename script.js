@@ -22,6 +22,17 @@ const products = [
         image: "images/wrapped.jpg",
         description: "A breathtaking bouquet of 12 hand-selected deep red roses, complemented by fragrant silver dollar eucalyptus and wrapped in sleek, premium craft paper."
     },
+    
+    {
+        id: 8,
+        name: "Classic Cuddle Keepsake Teddy Bear",
+        category: "bears",
+        price: 110.00,
+        rating: 4.5,
+        tag: "Congratulations",
+        image: "images/teddybear.webp",
+        description: "A timeless, ultra-soft teddy bear wearing an elegant satin bow tie, making it the perfect companion to any flower delivery."
+    },
     {
         id: 3,
         name: "Radiant Sunflowers & Red Roses Arrangement",
@@ -71,16 +82,6 @@ const products = [
         tag: "Congratulations",
         image: "images/pel26.jpg",
         description: "An extra-large, ultra-soft plush bear holding a stitched crimson heart, stuffed with hypoallergenic plush fiber for unforgettable hugs."
-    },
-    {
-        id: 8,
-        name: "Classic Cuddle Keepsake Teddy Bear",
-        category: "bears",
-        price: 110.00,
-        rating: 4.5,
-        tag: "Congratulations",
-        image: "images/teddybear.webp",
-        description: "A timeless, ultra-soft teddy bear wearing an elegant satin bow tie, making it the perfect companion to any flower delivery."
     },
     {
         id: 9,
@@ -153,7 +154,7 @@ const builderOptions = {
         { id: 'b_e1', name: 'ferrero Chocolate Box', price: 18, img: 'https://images.unsplash.com/photo-1549007994-cb92caebd54b?fit=crop&w=300&q=80' },
         { id: 'b_e2', name: 'Satin Rose Ribbon Wrap', price: 8, img: 'https://images.unsplash.com/photo-1513519245088-0e12902e5a38?fit=crop&w=300&q=80' },
         { id: 'b_e3', name: 'Handwritten Card', price: 2, img: 'https://images.unsplash.com/photo-1586075010923-2dd4570fb338?fit=crop&w=300&q=80' },
-        { id: 'b_e4', name: 'Special foil balloon', price: 5, img: 'images/happball.png' }
+        { id: 'b_e4', name: 'Special foil balloon', price: 5, img: 'images/happBall.png' }
     ]
 };
 
