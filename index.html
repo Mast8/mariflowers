@@ -106,7 +106,7 @@
                 </button>
 
                 <!-- Mobile menu toggle -->
-                <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-700 hover:text-bloom-500">
+                <button id="mobile-menu-btn" aria-label="Toggle navigation menu" class="md:hidden p-2 text-gray-700 hover:text-bloom-500">
                     <i class="fa-solid fa-bars text-xl"></i>
                 </button>
             </div>
@@ -467,7 +467,7 @@
 
     <div id="quickview-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 p-4">
         <div class="bg-white border-white/10 w-full max-w-3xl rounded-3xl overflow-hidden shadow-2xl relative transform scale-95 transition-transform duration-300 max-h-[90vh] flex flex-col md:flex-row" id="quickview-content">
-            <button id="close-quickview" class="absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-white/80 text-gray-700 flex items-center justify-center hover:bg-white shadow">
+            <button id="close-quickview" aria-label="close item view" class="absolute top-4 right-4 z-10 w-9 h-9 rounded-full bg-white/80 text-gray-700 flex items-center justify-center hover:bg-white shadow">
                 <i class="fa-solid fa-xmark"></i>
             </button>
             <div class="w-full md:w-1/2 h-64 md:h-auto relative bg-bloom-100">
@@ -487,7 +487,7 @@
                     </div>
                 </div>
 
-                <button id="modal-add-btn" class="w-full py-3.5 rounded-xl bg-bloom-500 text-white font-medium hover:bg-bloom-600 transition-colors shadow-md flex items-center justify-center gap-2">
+                <button id="modal-add-btn" aria-label="add to cart button" class="w-full py-3.5 rounded-xl bg-bloom-500 text-white font-medium hover:bg-bloom-600 transition-colors shadow-md flex items-center justify-center gap-2">
                     <i class="fa-solid fa-basket-shopping"></i> Add to Cart
                 </button>
             </div>
