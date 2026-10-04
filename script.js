@@ -45,13 +45,13 @@ const products = [
     },
     {
         id: 4,
-        name: "Pastel Peony & Hydrangea Dream Bouquet",
+        name: "Roses Dream in a big vase",
         category: "flowers",
         price: 92.00,
         rating: 5.0,
         tag: "Birthday",
         image: "images/arreglo1.jpg",
-        description: "Soft blush peonies, sky-blue hydrangeas, and delicate white spray roses beautifully hand-wrapped in layered blush silk paper."
+        description: "Soft blush, and delicate spray roses beautifully wrapped in a crystal vase."
     },
     {
         id: 5,
@@ -61,27 +61,17 @@ const products = [
         rating: 4.9,
         tag: "Romantic",
         image: "images/arreglo2.jpg",
-        description: "An impressive arrangement featuring extra-long, velvety red roses meticulously curated in a tall ceramic vase for grand gestures."
+        description: "An impressive arrangement featuring extra-long, velvety roses meticulously curated in a tall vase for grand gestures."
     },
     {
         id: 6,
-        name: "Sunshine Meadow Floral & Chocolate Bundle",
+        name: "Sunshine Floral & rose Bundle",
         category: "flowers",
         price: 110.00,
         rating: 4.7,
         tag: "Congratulations",
         image: "images/ana.jpg",
-        description: "A radiant vase arrangement featuring vivid yellow lilies, white gardenias, and fresh greenery paired with ferrero chocolate."
-    },
-    {
-        id: 7,
-        name: "Jumbo 26\" Sweetheart Plush Bear",
-        category: "bears",
-        price: 110.00,
-        rating: 4.5,
-        tag: "Congratulations",
-        image: "images/pel26.jpg",
-        description: "An extra-large, ultra-soft plush bear holding a stitched crimson heart, stuffed with hypoallergenic plush fiber for unforgettable hugs."
+        description: "A radiant vase arrangement featuring vivid roses"
     },
     {
         id: 9,
@@ -92,6 +82,16 @@ const products = [
         tag: "Congratulations",
         image: "images/50.jpg",
         description: "Elegantly wrapped long-stemmed roses tied with a bow, exquisitely presented inside a crystal vase."
+    },
+    {
+        id: 7,
+        name: "Medium 16\" Sweetheart Plush Bear",
+        category: "bears",
+        price: 110.00,
+        rating: 4.5,
+        tag: "Congratulations",
+        image: "images/pel26.jpg",
+        description: "An ultra-soft plush bear holding a stitched heart for unforgettable hugs."
     }
 ];
 
