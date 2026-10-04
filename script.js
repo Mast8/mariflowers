@@ -4,13 +4,13 @@
 const products = [
     {
         id: 1,
-        name: "Crimson Velvet Roses & Chocolates Gift Set",
+        name: "Crimson Velvet Roses & Chocolates Gift",
         category: "flowers",
         price: 128.00,
         rating: 5.0,
         tag: "Romantic",
         image: "images/arrangcho.jpg",
-        description: "12 long-stemmed roses artfully arranged in a clear glass vase, presented alongside a chocolates for the ultimate romantic statement."
+        description: "14 long-stemmed roses artfully arranged in a clear glass vase, presented alongside a chocolates for the ultimate romantic statement."
     },
     {
         id: 2,
@@ -20,28 +20,28 @@ const products = [
         rating: 4.9,
         tag: "Romantic",
         image: "images/wrapped.jpg",
-        description: "A breathtaking bouquet of 12 hand-selected deep red roses, complemented by fragrant silver dollar eucalyptus and wrapped in sleek, premium craft paper."
+        description: "A breathtaking bouquet of 12 hand-selected roses, complemented by wrapped in sleek, craft paper."
     },
     
     {
         id: 8,
-        name: "Classic Cuddle Keepsake Teddy Bear",
+        name: "Selecction of Cuddle Teddy Bears",
         category: "bears",
         price: 110.00,
         rating: 4.5,
         tag: "Congratulations",
         image: "images/teddybear.webp",
-        description: "A timeless, ultra-soft teddy bear wearing an elegant satin bow tie, making it the perfect companion to any flower delivery."
+        description: "A timeless, ultra-soft teddy bears variety in models ans sizes, making it the perfect companions to any flower delivery."
     },
     {
         id: 3,
-        name: "Radiant Sunflowers & Red Roses Arrangement",
+        name: "Radiant Sunflowers & Yellow Roses Arrangement",
         category: "flowers",
         price: 45.00,
         rating: 4.8,
         tag: "Get Well",
         image: "images/yellow.jpg",
-        description: "A joyful blend of vibrant golden sunflowers and deep crimson roses designed to brighten anyone's day and bring warmth to any room."
+        description: "A joyful blend of vibrant golden sunflowers and yellow roses designed to brighten anyone's day and bring warmth to any room."
     },
     {
         id: 4,
